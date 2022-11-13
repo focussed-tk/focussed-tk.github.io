@@ -109,12 +109,12 @@ function renderPage()
 		var title = article[1];
 		var url = article[2];
 		var imgUrl = url.replace("https://www.youtube.com/watch?v=","https://i3.ytimg.com/vi/");
-		url = url.replace("watch?v=","embed/");
+		var embedUrl = url.replace("watch?v=","embed/");
 		thumbnailUrls[articleNum] = imgUrl;
 		imgUrl+="/maxresdefault.jpg";
 		var images = article[3];
 		var text = article[4];
-		embedUrls[articleNum] = '<iframe width="940" height="528" src="'+url+'?&autoplay=1"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+		embedUrls[articleNum] = '<iframe width="940" height="528" src="'+embedUrl+'?&autoplay=1"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 		var a = `<br><table>
 				<tr>
 					<td>
@@ -127,7 +127,7 @@ function renderPage()
 					<td>
 						<div class="textColumn">
 							<!--<h1 onclick="javascript:play(this.parentElement.previousElementSibling.previousElementSibling  ,`+articleNum+`)">`+title+`</h1>-->
-							<h1 onclick="javascript:location.href='charli-damelio-being-rude-to-fans.html'" >`+title+`</h1>
+							<h1 onclick="javascript:location.href='`+url+`'" >`+title+`</h1>
 							`+text+`
 						</div>
 					</td>
