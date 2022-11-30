@@ -127,7 +127,7 @@ function renderPage()
 					<td>
 						<div class="textColumn">
 							<!--<h1 onclick="javascript:play(this.parentElement.previousElementSibling.previousElementSibling  ,`+articleNum+`)">`+title+`</h1>-->
-							<h1 onclick="javascript:location.href='`+url+`'" >`+title+`</h1>
+							<h1>`+title+`</h1>
 							`+text+`
 						</div>
 					</td>
@@ -138,7 +138,7 @@ function renderPage()
 		for(var i = 1; i <= images.split("-")[1] ;i++)
 			a += `<img width="200" height="200" src="i/`+images.split("-")[0]+`-`+i+`.jpg"/>`;
 		a+=`</div>
-			<br>`;
+			<br><br>`;
 		document.getElementById("content").innerHTML += a;
 	}
 }
@@ -158,5 +158,4 @@ function play(element,id)
 }
 </script>
 </html>
-
 
